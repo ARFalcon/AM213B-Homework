@@ -6,11 +6,11 @@ A=[alpha,    0;
 
 c=[alpha, 1];
 b=[1-alpha, alpha];
-%
+
 k=zeros(p,1);
 wv=zeros(Nstep+1,1); wv(1,:)=w0;
 tv=zeros(Nstep+1,1); tv(1)=t0;
-%
+
 for n=1:Nstep
   for i=1:p % solve ki sequentially at each stage
     % The equation for ki comes from the DIRK method
@@ -28,5 +28,3 @@ for n=1:Nstep
   wv(n+1)=w0;
   tv(n+1)=t0;
 end
-%
-%
